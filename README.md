@@ -195,7 +195,7 @@ This will:
 - Deploy a lab (Terraform)
 - Automatically destroy it after a predefined delay (10min)
 
-Clean up:
+# 🧹 9. Clean up:
 Destroy the infrastructure:
 ```bash
 terraform -chdir=TempLAB destroy -auto-approve
