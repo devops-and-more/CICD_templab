@@ -1,0 +1,33 @@
+adminUser: admin
+adminPassword: Pa$$w0rd
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  ingressClassName: gitlab-nginx
+  annotations:
+    cert-manager.io/issuer: gitlab-issuer
+    kubernetes.io/ingress.class: gitlab-nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  hosts:
+    - grafana.${myDomain}
+  tls:
+    - hosts:
+        - grafana.${myDomain}
+      secretName: grafana-tls
+
+# ---------------------------
+# 📡 Preconfigure Prometheus
+# ---------------------------
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        access: proxy
+        url: http://gitlab-prometheus-server.gitlab.svc.cluster.local
+        isDefault: true
+        editable: false
