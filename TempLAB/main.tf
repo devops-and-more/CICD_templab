@@ -92,7 +92,7 @@ data "local_file" "lb_ip" {
 
 locals {
   lb_ip     = trimspace(data.local_file.lb_ip.content)
-  my_domain = "${local.lb_ip}.nip.io"
+  my_domain = "${local.lb_ip}.sslip.io" # or nip.io if it doesn't work bcz of quota issue "${local.lb_ip}.nip.io"
 }
 
 # -------------------------------
