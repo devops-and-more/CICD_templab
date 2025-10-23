@@ -11,6 +11,8 @@ ingress:
     cert-manager.io/issuer: gitlab-issuer
     kubernetes.io/ingress.class: gitlab-nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "512m"
+    acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
     - grafana.${myDomain}
   tls:
