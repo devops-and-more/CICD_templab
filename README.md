@@ -1,3 +1,27 @@
+## 🚀 Ephemeral DevOps Labs with GitLab CI/CD + Terraform + Kubernetes
+
+This repository showcases a complete implementation of **ephemeral lab environments** — temporary DevOps playgrounds that deploy automatically in minutes and self-destruct after a defined time.  
+
+The idea was inspired by platforms like *KillerCoda*, *Play with K8s*, and *AWS Skill Builder*, which allow learners to spin up full lab environments effortlessly. I wanted to recreate that same experience using **CI/CD automation**.  
+
+With this setup, a single click on the frontend triggers a **GitLab CI/CD pipeline** that:  
+1️⃣ **Deploys** a fully functional environment (via Terraform)  
+2️⃣ **Destroys** it automatically after a delay  
+
+### 🧩 What’s Inside
+- **Infrastructure as Code:** Terraform provisions everything on GCP or AWS  
+- **Kubernetes Cluster:** GKE or EKS  
+- **GitLab Stack:** GitLab, Prometheus, Grafana, etc. deployed via Helm  
+- **Ingress + Monitoring:** Automated TLS and metrics forwarding  
+- **Remote State Management:** S3 bucket + DynamoDB  
+- **Auto-cleanup:** Timer-based destroy job for cost-efficient ephemeral labs  
+
+### 🛠️ Tech Stack
+`GitLab CI/CD` • `Terraform` • `Kubernetes` • `Helm` • `Prometheus` • `Grafana` • `AWS` • `GCP` • `S3` • `DynamoDB` • `Ingress` • `Slack Integration`
+
+### 📹 Coming Soon
+I  shared the full implementation step-by-step in my videos:
+
 # 🧰 Requirements
 
 Before you begin, make sure you have:
