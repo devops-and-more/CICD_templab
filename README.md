@@ -8,6 +8,10 @@ With this setup, a single click on the frontend triggers a **GitLab CI/CD pipeli
 1️⃣ **Deploys** a fully functional environment (via Terraform)  
 2️⃣ **Destroys** it automatically after a delay  
 
+<p align="center">  
+  <img src="./Presentation1.gif" alt="Demo animation" width="600"/>  
+</p>  
+
 ### 🧩 What’s Inside
 - **Infrastructure as Code:** Terraform provisions everything on GCP or AWS  
 - **Kubernetes Cluster:** GKE or EKS  
