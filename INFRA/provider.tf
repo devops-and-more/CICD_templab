@@ -14,5 +14,5 @@ terraform {
 provider "google" {
   project     = var.project
   region      = var.region
-  credentials = file("accesskeys.json")
+  credentials = file("accesskeys.json") # Access keys should be in this file
 }
