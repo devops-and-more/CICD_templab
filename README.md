@@ -71,7 +71,7 @@ Grafana is deployed **independently**, connected to Prometheus, and exposed via 
 
 The Ingress uses a free DNS domain format:
 ```
-<STATIC_IP>.nip.io
+<STATIC_IP>.sslip.io
 ```
 
 Deploy it with:
